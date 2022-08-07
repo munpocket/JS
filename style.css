@@ -53,6 +53,12 @@ body {
     padding: 15px 35px 15px 15px;
     border: 1px solid #eee;
    }
+
+   .pull-down-list a{
+    text-decoration: none;
+    color: #333;
+   }
+
    .contents{
     height: 100vh;
     background-color: #f0f0f0;

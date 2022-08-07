@@ -1,6 +1,8 @@
-
+function pullDown(){
 const pullDownButton = document.getElementById('lists');
 const pullDownParents = document.getElementById('pull-down');
+const pullDownChild = document.querySelectorAll('.pull-down-list');
+const currentList = document.getElementById('current-list');
 
 pullDownButton.addEventListener("mouseover",function(){
     this.setAttribute("style","background-color:blue;")
@@ -23,7 +25,15 @@ pullDownButton.addEventListener("click",function(){
     }else{
         pullDownParents.setAttribute("style","display:block;")  
         console.log("表示");
-    }
-    
-    
+    }  
 })
+
+pullDownChild.forEach(function(list){
+    list.addEventListener('click',function(){
+        const value = list.innerHTML;
+        currentList.innerHTML= value;
+        console.log(value);
+    })
+})
+}
+window.addEventListener("load",pullDown)
